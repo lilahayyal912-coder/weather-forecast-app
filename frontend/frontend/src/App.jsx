@@ -1,11 +1,17 @@
+import { Routes, Route } from "react-router-dom";
+
+import Welcome from "./pages/Welcome";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
 import WeatherDashboard from "./pages/WeatherDashboard";
 
-function App() {
+export default function App() {
   return (
-    <div>
-      <WeatherDashboard />
-    </div>
+    <Routes>
+      <Route path="/" element={<Welcome />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/weather" element={<WeatherDashboard />} />
+    </Routes>
   );
 }
-
-export default App;
